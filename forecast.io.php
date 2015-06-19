@@ -8,7 +8,8 @@
  * @link https://developer.forecast.io/
  */
 
-$cache_file	= 'forecast.io.cache';
+define(CACHE_PATH, __DIR__ . '/');
+$cache_file	= 'forecast.io.json';
 $cache_time	= 5 * 60; // default five minute cache
 $base_url		= 'https://api.forecast.io/forecast/';
 $api_key		= '';
@@ -21,7 +22,7 @@ $headers[]	= 'Content-length: 0';
 $headers[]	= 'Content-type: application/json';
 //$headers[]	= 'Authorization: Bearer ' . $api_key;
 
-$fetch_cache = file_get_contents('./' . $cache_file);
+$fetch_cache = @file_get_contents(CACHE_PATH . $cache_file);
 if(($fetch_cache !== false) && ((filemtime($cache_file) + $cache_time) > time()))
 {
 	// Use our cached results
@@ -41,9 +42,7 @@ else
 	$response = curl_exec($ch);
 	
 	// Write to a cache file
-	$fp = fopen($cache_file, 'w');
-	fwrite($fp, $response);
-	fclose($fp);
+	@file_put_contents(CACHE_PATH . $cache_file, $response);
 }
 
 $enc_response = json_decode($response, true);
