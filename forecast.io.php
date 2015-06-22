@@ -43,6 +43,7 @@ else
 	
 	// Write to a cache file
 	@file_put_contents(CACHE_PATH . $cache_file, $response);
+	touch($cache_file, time());
 }
 
 $enc_response = json_decode($response, true);
