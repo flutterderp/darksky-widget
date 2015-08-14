@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="91px" height="57px" viewBox="0 0 91 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="weather-icons" sketch:type="MSLayerGroup" transform="translate(-517.000000, -71.000000)" fill="#FFFFFF">
+            <g id="work" transform="translate(49.000000, 57.000000)" sketch:type="MSShapeGroup">
+                <path d="M537.697,29.082 C535.875,29.082 534.107,29.319 532.424,29.76 C529.269,20.813 520.746,14.401 510.72,14.401 C498.437,14.401 488.404,24.025 487.744,36.144 C486.994,36.045 486.232,35.975 485.453,35.975 C475.894,35.975 468.148,43.723 468.148,53.281 C468.148,62.839 475.894,70.586 485.453,70.586 L537.697,70.586 C549.158,70.586 558.449,61.298 558.449,49.834 C558.449,38.371 549.158,29.082 537.697,29.082" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

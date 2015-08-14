@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="92px" height="55px" viewBox="0 0 92 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="weather-icons" sketch:type="MSLayerGroup" transform="translate(-971.000000, -748.000000)" fill="#FFFFFF">
+            <g id="work" transform="translate(49.000000, 57.000000)" sketch:type="MSShapeGroup">
+                <g id="Group" transform="translate(922.000000, 691.000000)">
+                    <path d="M4.44,23.09 L87.76,23.09 C89.96,23.09 91.76,21.502 91.76,19.561 C91.76,17.621 89.96,16.033 87.76,16.033 L4.44,16.033 C2.24,16.033 0.44,17.621 0.44,19.561 C0.44,21.502 2.24,23.09 4.44,23.09" id="Shape"></path>
+                    <path d="M87.76,31.868 L4.44,31.868 C2.24,31.868 0.44,33.456 0.44,35.395 C0.44,37.337 2.24,38.925 4.44,38.925 L87.76,38.925 C89.96,38.925 91.76,37.337 91.76,35.395 C91.76,33.456 89.96,31.868 87.76,31.868" id="Shape"></path>
+                    <path d="M76.76,47.534 L15.44,47.534 C13.24,47.534 11.44,49.122 11.44,51.062 C11.44,53.003 13.24,54.591 15.44,54.591 L76.76,54.591 C78.96,54.591 80.76,53.003 80.76,51.062 C80.76,49.122 78.96,47.534 76.76,47.534" id="Shape"></path>
+                    <path d="M15.44,7.59 L76.76,7.59 C78.96,7.59 80.76,6.002 80.76,4.061 C80.76,2.119 78.96,0.531 76.76,0.531 L15.44,0.531 C13.24,0.531 11.44,2.119 11.44,4.061 C11.44,6.002 13.24,7.59 15.44,7.59" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
