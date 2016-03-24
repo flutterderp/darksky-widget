@@ -51,6 +51,9 @@ $enc_response = json_decode($response, true);
 if(is_array($enc_response) && json_last_error() == JSON_ERROR_NONE)
 {
 	$current			= $enc_response['currently'];
+	$today_stats	= $enc_response['daily']['data'][0];
+	$low					= $today_stats['temperatureMin'];
+	$high					= $today_stats['temperatureMax'];
 	$c_time				= new DateTime($current->time, new DateTimeZone($enc_response['timezone']));
 	$forecast_url	= 'http://forecast.io/#/f/' . $location;
 	//echo '<pre>'; print_r($enc_response); echo '</pre>';
@@ -71,6 +74,7 @@ if(is_array($enc_response) && json_last_error() == JSON_ERROR_NONE)
 							</span>
 						</li>
 						<li><span class="forecast"><?php echo $current['summary']; ?></span></li>
+						<li>High: <?php echo $high; ?> / Low: <?php echo $low; ?></li>
 					</ul>
 					<span class="wicon">
 						images/weather-icons/<?php echo $current['icon']; ?>.png
