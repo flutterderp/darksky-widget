@@ -1,4 +1,4 @@
 # darksky-widget
-Sidebar widget using PHP and the [Forecast.io](https://forecast.io/)/Dark Sky API
+Widget using PHP and the [Dark Sky](https://darksky.net/) API
 
-Create an account at https://developer.forecast.io/ to obtain an API key.
+Create an account at https://darksky.net/dev/ to obtain an API key.
