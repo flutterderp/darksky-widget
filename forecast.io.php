@@ -11,7 +11,7 @@
 define(CACHE_PATH, __DIR__ . '/');
 $cache_file	= 'forecast.io.json';
 $cache_time	= 5 * 60; // default five minute cache
-$base_url		= 'https://api.forecast.io/forecast/';
+$base_url		= 'https://api.darksky.net/forecast/';
 $api_key		= '';
 $latitude		= '35.3156';
 $longitude	= '-82.4587';
@@ -81,7 +81,7 @@ if(is_array($enc_response) && json_last_error() == JSON_ERROR_NONE)
 						<!--<img src="/images/weather-icons/<?php echo $current['icon']; ?>.png" alt="Current weather in Hendersonville, NC" />-->
 					</span>
 				</div>
-				<p class="clearfix"><a href="<?php echo $forecast_url; ?>" target="_blank"><small>Full Forecast via Forecast.io</small></a></p>
+				<p class="clearfix"><a href="<?php echo $forecast_url; ?>" target="_blank"><small>Full Forecast via Dark Sky</small></a></p>
 			</div>
 		</div>
 	</div>
