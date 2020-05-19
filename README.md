@@ -1,4 +1,4 @@
-# darksky-widget
-Widget using PHP and the [Dark Sky](https://darksky.net/) API
+# weather widget
+Widget using PHP and [WeatherAPI](https://www.weatherapi.com/).
 
-Create an account at https://darksky.net/dev/ to obtain an API key.
+Create an account at https://www.weatherapi.com/ to obtain an API key.
