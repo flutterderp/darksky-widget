@@ -117,33 +117,35 @@ $enc_response = json_decode($result);
 	$local_zone = new DateTimeZone($offset);
 	$local_time->setTimeZone($local_zone);
 
-	$current_weather = $weather_data->weather[0]->main;
-	$current_icon    = $weather_data->weather[0]->icon;
+	$current_icon = $weather_data->weather[0]->icon;
 	?>
-	<div class="weather-widget">
-		<div class="row">
-			<div class="small-12 columns">
-				<p>Current weather in <?php echo $weather_data->name; ?> as of <?php echo $local_time->format('M j@g:ia'); ?></p>
+	<div class="weather__widget">
+		<p>Current weather in <?php echo $weather_data->name; ?> as of<br><?php echo $local_time->format('M j@g:ia'); ?></p>
 
-				<div class="clearfix">
-					<ul class="no-bullet tempforecast">
-						<li>
-							<span class="temp">
-								<?php echo $weather_data->main->temp; ?>°
-								<small>(Feels like <?php echo $weather_data->main->feels_like; ?>)</small>
-							</span>
-						</li>
-						<li><span class="forecast"><?php echo $current_weather; ?></span></li>
-						<li>High: <?php echo $high; ?> / Low: <?php echo $low; ?></li>
-					</ul>
-					<span class="wicon">
-						<img src="http://openweathermap.org/img/wn/<?php echo $current_icon; ?>@2x.png" alt="<?php echo htmlspecialchars($weather_data->weather->description, ENT_COMPAT|ENT_HTML5, 'utf-8'); ?>">
-					</span>
-				</div>
-				<p><small>Weather data provided by <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer" title="OpenWeather">OpenWeather</a></small></p>
-			</div>
+		<div class="current__weather">
+			<p><img src="http://openweathermap.org/img/wn/<?php echo $current_icon; ?>@2x.png" alt="<?php echo htmlspecialchars($weather_data->weather[0]->description, ENT_COMPAT|ENT_HTML5, 'utf-8'); ?>" height="100"></p>
+
+			<p class="current__temp"><?php echo round($weather_data->main->temp); ?>°</p>
 		</div>
+
+		<div class="current__details">
+			<p><?php echo $weather_data->weather[0]->main; ?></p>
+			<p>Feels like <?php echo round($weather_data->main->feels_like); ?>°.</p>
+			<p>High: <?php echo round($high); ?>° / Low: <?php echo round($low); ?>°</p>
+		</div>
+
+		<p class="weather__attribution"><small>Weather data provided by <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer" title="OpenWeather">OpenWeather</a></small></p>
 	</div>
+	<style>
+		.weather__widget { font-size: 16px; font-weight: normal; line-height: normal; margin: 0 auto; max-width: 300px; }
+		.weather__widget img { display: block; height: auto; margin: 0 auto; min-height: 100px; max-width: 100%; width: auto; }
+		.weather__widget p { margin: 0; }
+		.weather__widget > p { margin: 10px 0; }
+		.weather__attribution { text-align: center; }
+		.current__weather, .current__details { align-items: center; display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; text-align: center }
+		.current__weather > *, .current__details > * { display: block; flex: 1 1 calc((100% / 2) - 2px); }
+		.current__weather { font-size: 32px; font-weight: bold; }
+	</style>
 <?php else : ?>
 	<?php //echo 'Error: ' . $response; ?>
 <?php endif; ?>
