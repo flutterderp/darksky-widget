@@ -28,7 +28,7 @@ $headers     = array();
 $headers[]   = 'Content-length: 0';
 $headers[]   = 'Content-type: application/json';
 $headers[]   = 'User-Agent: ';
-//$headers[]   = 'Authorization: Bearer ' . $api_key;
+// $headers[]   = 'Authorization: Bearer ' . $api_key;
 $fetch_cache = file_get_contents(CACHE_PATH . $cache_file);
 
 if(($fetch_cache !== false) && ((filemtime($cache_file) + $cache_time) > time()))
