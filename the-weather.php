@@ -19,8 +19,8 @@ $cache_file  = 'the-weather.json';
 $cache_time  = 5 * 60; // default five minute cache
 $base_url    = 'https://api.weatherapi.com/v1/forecast.json';
 $api_key     = '';
-/* $latitude    = '35.3156';
-$longitude   = '-82.4587';
+/* $latitude    = '36.8529';
+$longitude   = '-75.978';
 $location    = $latitude . ',' . $longitude; */
 $location    = 'Virginia Beach, VA';
 $ch          = curl_init();
@@ -28,7 +28,7 @@ $headers     = array();
 $headers[]   = 'Content-length: 0';
 $headers[]   = 'Content-type: application/json';
 $headers[]   = 'User-Agent: ';
-//$headers[]   = 'Authorization: Bearer ' . $api_key;
+// $headers[]   = 'Authorization: Bearer ' . $api_key;
 $fetch_cache = file_get_contents(CACHE_PATH . $cache_file);
 
 if(($fetch_cache !== false) && ((filemtime($cache_file) + $cache_time) > time()))
