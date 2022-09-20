@@ -28,8 +28,8 @@ $base_url   = 'https://api.open-meteo.com/v1/forecast';
 $params     = array();
 
 // Configure API parameters
-$params['latitude']           = '35.3156';
-$params['longitude']          = '-82.4587';
+$params['latitude']           = '36.8529';
+$params['longitude']          = '-75.978';
 $location                     = $params['latitude'] . ',' . $params['longitude'];
 $params['hourly']             = 'temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,weathercode';
 $params['daily']              = 'weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum';

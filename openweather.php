@@ -22,8 +22,8 @@ $params     = array();
 
 // Configure API parameters
 $params['appid']   = '';
-$params['lat']     = '35.3156';
-$params['lon']     = '-82.4587';
+$params['lat']     = '36.8529';
+$params['lon']     = '-75.978';
 $params['units']   = 'imperial';
 $params['exclude'] = '';
 $location          = $params['lat'] . ',' . $params['lon'];
