@@ -29,14 +29,13 @@ $params['exclude'] = '';
 $location          = $params['lat'] . ',' . $params['lon'];
 
 // Initialise cURL session
-$ch        = curl_init();
-$headers   = array();
-$headers[] = 'Content-length: 0';
-$headers[] = 'Content-type: application/json';
-$headers[] = 'User-Agent: ';
-// $headers[] = 'Authorization: Bearer ' . $api_key;
+$ch          = curl_init();
+$headers     = array();
+$headers[]   = 'Content-length: 0';
+$headers[]   = 'Content-type: application/json';
+$headers[]   = 'User-Agent: ';
+// $headers[]   = 'Authorization: Bearer ' . $api_key;
 $fetch_cache = file_exists(CACHE_PATH . $cache_file) ? file_get_contents(CACHE_PATH . $cache_file) : false;
-$wmo_codes   = parse_ini_file(__DIR__ . '/wmo-codes.ini');
 
 if(($fetch_cache !== false) && ((filemtime($cache_file) + $cache_time) > time()))
 {
@@ -134,7 +133,7 @@ $enc_response = json_decode($result);
 			<p>High: <?php echo round($high); ?>° / Low: <?php echo round($low); ?>°</p>
 		</div>
 
-		<p class="weather__attribution"><small>Weather data provided by <a href="https://openweathermap.org/" target="_blank" rel="noopener noreferrer" title="OpenWeather">OpenWeather</a></small></p>
+		<p class="weather__attribution"><small>Weather data provided by <a href="https://openweathermap.org/city/<?php echo $weather_data->id; ?>" target="_blank" rel="noopener noreferrer" title="OpenWeather">OpenWeather</a></small></p>
 	</div>
 	<style>
 		.weather__widget { font-size: 16px; font-weight: normal; line-height: normal; margin: 0 auto; max-width: 300px; }
